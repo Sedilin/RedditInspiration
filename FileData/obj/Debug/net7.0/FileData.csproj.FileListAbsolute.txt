@@ -1,0 +1,17 @@
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/bin/Debug/net7.0/FileData.deps.json
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/bin/Debug/net7.0/FileData.dll
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/bin/Debug/net7.0/FileData.pdb
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/bin/Debug/net7.0/Application.dll
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/bin/Debug/net7.0/Domain.dll
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/bin/Debug/net7.0/Application.pdb
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/bin/Debug/net7.0/Domain.pdb
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/obj/Debug/net7.0/FileData.csproj.AssemblyReference.cache
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/obj/Debug/net7.0/FileData.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/obj/Debug/net7.0/FileData.AssemblyInfoInputs.cache
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/obj/Debug/net7.0/FileData.AssemblyInfo.cs
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/obj/Debug/net7.0/FileData.csproj.CoreCompileInputs.cache
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/obj/Debug/net7.0/FileData.csproj.CopyComplete
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/obj/Debug/net7.0/FileData.dll
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/obj/Debug/net7.0/refint/FileData.dll
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/obj/Debug/net7.0/FileData.pdb
+/Users/lukaszsramkowski/RiderProjects/RedditInspiration/FileData/obj/Debug/net7.0/ref/FileData.dll

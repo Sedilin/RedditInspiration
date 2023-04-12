@@ -1,0 +1,23 @@
+{
+  "Users": [
+    {
+      "Id": 1,
+      "UserName": "Lukasz",
+      "Password": "1234",
+      "Type": "User"
+    }
+  ],
+  "Posts": [
+    {
+      "Id": 0,
+      "Owner": {
+        "Id": 1,
+        "UserName": "Lukasz",
+        "Password": "1234",
+        "Type": "User"
+      },
+      "Title": "Hey Test",
+      "Body": "It is just a test"
+    }
+  ]
+}

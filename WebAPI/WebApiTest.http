@@ -1,0 +1,9 @@
+POST https://localhost:7222/auth/login
+Content-Type: application/json
+
+{ "UserName" : "Chris", "Password" : "123" }
+
+###
+
+GET https://localhost:7222/test/authorized
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIyNTMzMWM5MC0xZTYzLTQwMzItOGI0MC04OTI4NTc5YmE4ZDAiLCJpYXQiOiIwMi8wNC8yMDIzIDIwLjIwLjQxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IkNocmlzIiwiVHlwZSI6IlVzZXIiLCJleHAiOjE2ODA0NzA0NDEsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZUJsYXpvcldhc21DbGllbnQifQ.DB1i6DnBODKWtpnxC0DDQ_ivCT1tMdOdoVtgdagseLYbQsn9qF5moTXoJ85q08GR4wgBRQREv7SpOR4zxU7nWQ

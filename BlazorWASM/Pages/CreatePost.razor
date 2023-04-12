@@ -1,0 +1,85 @@
+@page "/CreatePost"
+@using global::Shared
+@using global::Shared.DTOs
+@using HttpClients.ClientInterfaces
+@using System.Security.Claims
+@attribute [Authorize]
+@inject IPostService postService
+@inject NavigationManager navMgr
+<AuthorizeView>
+    <Authorized>
+        <div class="card">
+            <h3>Create Post</h3>
+                <div class="form-group field">
+                    <label>Title:</label>
+                    <input type="text" @bind="postTitle"/>
+                </div>
+                <div class="form-group field">
+                    <label>Body:</label>
+                    <input type="text" @bind="postBody"/>
+                </div>
+                <div class="button-row">
+                    @if (!string.IsNullOrEmpty(msg))
+                    {
+                        <label style="color: red">@msg</label>
+                    }
+                    <button @onclick="Create" class="acceptbtn">Create</button>
+                </div>
+        </div>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; } = null!;
+    
+    private int? selectedUserId;
+    private string postTitle = "";
+    private string postBody = "";
+    private bool isLoggedIn;
+
+    private string msg = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await AuthState;
+        ClaimsPrincipal user = authState.User;
+        isLoggedIn = user.Identity != null;
+        
+        if (!isLoggedIn) return;
+        selectedUserId = Int32.Parse(authState.User.FindFirstValue("Id")!);
+    }
+
+    private async Task Create()
+    {
+        msg = "";
+        if (selectedUserId == null)
+        {
+            msg = "You must select an assignee!";
+            return;
+        }
+        if (string.IsNullOrEmpty(postTitle))
+        {
+            msg = "Title cannot be empty!";
+            return;
+        }
+        if (string.IsNullOrEmpty(postBody))
+        {
+            msg = "Body cannot be empty!";
+            return;
+        }
+
+        try
+        {
+            PostCreationDto dto = new((int)selectedUserId, postTitle, postBody);
+            await postService.CreateAsync(dto);
+            navMgr.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+}
